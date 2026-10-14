@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Events | Campus Events</title>
+
+    <link rel="stylesheet"
+        href="../../css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="admin-body">
+
+
+    <!-- ADMIN NAVBAR -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-brand">
+
+            <a href="../../index.html"
+                class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+            <span class="admin-label">
+                ADMIN PANEL
+            </span>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div>
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Event Manager
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="admin-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <nav>
+
+                <a href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span>▦</span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="manage-events.html"
+                    class="admin-nav-link active">
+
+                    <span>◈</span>
+
+                    Manage Events
+
+                </a>
+
+
+                <a href="add-event.html"
+                    class="admin-nav-link">
+
+                    <span>＋</span>
+
+                    Add Event
+
+                </a>
+
+
+                <a href="registrations.html"
+                    class="admin-nav-link">
+
+                    <span>♙</span>
+
+                    Registrations
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="../../index.html"
+                    class="admin-nav-link">
+
+                    <span>←</span>
+
+                    Back to Website
+
+                </a>
+
+
+                <a href="../login.html"
+                    class="admin-nav-link logout-link">
+
+                    <span>↪</span>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN -->
+
+        <main class="admin-main">
+
+
+            <div class="admin-page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        EVENT MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Manage Events
+                    </h1>
+
+                    <p>
+                        Create, update and manage campus events.
+                    </p>
+
+                </div>
+
+
+                <a href="add-event.html"
+                    class="admin-primary-btn">
+
+                    + Add Event
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SEARCH / FILTER -->
+
+            <div class="event-management-toolbar">
+
+
+                <div class="admin-search">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="adminEventSearch"
+                        placeholder="Search events...">
+
+                </div>
+
+
+                <select
+                    id="adminCategoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="technical">
+                        Technical
+                    </option>
+
+                    <option value="cultural">
+                        Cultural
+                    </option>
+
+                    <option value="sports">
+                        Sports
+                    </option>
+
+                    <option value="workshop">
+                        Workshop
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="adminStatusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="draft">
+                        Draft
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- EVENTS TABLE -->
+
+            <div class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <h2>
+                            All Events
+                        </h2>
+
+                        <p>
+                            Manage all events created on the platform.
+                        </p>
+
+                    </div>
+
+                    <span class="event-count-label">
+                        6 Events
+                    </span>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table
+                        class="admin-table manage-events-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    EVENT
+                                </th>
+
+                                <th>
+                                    DATE
+                                </th>
+
+                                <th>
+                                    CATEGORY
+                                </th>
+
+                                <th>
+                                    REGISTRATIONS
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    ACTIONS
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="adminEventsTable">
+
+
+                            <tr
+                                data-category="technical"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        AI & Machine Learning Workshop
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Main Seminar Hall
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Oct 20, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Technical
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    84
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr
+                                data-category="cultural"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        Campus Cultural Fest
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Open Grounds
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Oct 25, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Cultural
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    120
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr
+                                data-category="sports"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        Inter-College Sports Meet
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Sports Complex
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Oct 28, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Sports
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    56
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr
+                                data-category="workshop"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        Career Development Workshop
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Seminar Hall
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Oct 30, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Workshop
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    73
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr
+                                data-category="technical"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        Campus Hackathon 2026
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Innovation Lab
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Nov 02, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Technical
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    95
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr
+                                data-category="cultural"
+                                data-status="active">
+
+                                <td>
+
+                                    <strong>
+                                        Student Photography Exhibition
+                                    </strong>
+
+                                    <small class="event-location">
+                                        Art Gallery
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    Nov 05, 2026
+                                </td>
+
+                                <td>
+
+                                    <span class="table-category">
+                                        Cultural
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    41
+                                </td>
+
+                                <td>
+
+                                    <span class="table-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="edit-event-btn">
+
+                                            Edit
+
+                                        </button>
+
+                                        <button
+                                            class="delete-event-btn">
+
+                                            Delete
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

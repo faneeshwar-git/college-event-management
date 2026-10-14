@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Campus Events</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="admin-body">
+
+
+    <!-- ADMIN NAVIGATION -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-brand">
+
+            <a href="../../index.html"
+                class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+            <span class="admin-label">
+                ADMIN PANEL
+            </span>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div>
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Event Manager
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ADMIN LAYOUT -->
+
+    <div class="admin-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <nav>
+
+                <a href="dashboard.html"
+                    class="admin-nav-link active">
+
+                    <span>▦</span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="manage-events.html"
+                    class="admin-nav-link">
+
+                    <span>◈</span>
+
+                    Manage Events
+
+                </a>
+
+
+                <a href="add-event.html"
+                    class="admin-nav-link">
+
+                    <span>＋</span>
+
+                    Add Event
+
+                </a>
+
+
+                <a href="registrations.html"
+                    class="admin-nav-link">
+
+                    <span>♙</span>
+
+                    Registrations
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="../../index.html"
+                    class="admin-nav-link">
+
+                    <span>←</span>
+
+                    Back to Website
+
+                </a>
+
+
+                <a href="../login.html"
+                    class="admin-nav-link logout-link">
+
+                    <span>↪</span>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+
+            <div class="admin-page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        OVERVIEW
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Welcome back, Administrator.
+                        Here's what's happening with your
+                        campus events.
+                    </p>
+
+                </div>
+
+
+                <a href="add-event.html"
+                    class="admin-primary-btn">
+
+                    + Create Event
+
+                </a>
+
+            </div>
+
+
+
+            <!-- STATISTICS -->
+
+            <section class="admin-stat-grid">
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL EVENTS
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <small>
+                            +4 this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+                        ♙
+                    </div>
+
+                    <div>
+
+                        <span>
+                            REGISTRATIONS
+                        </span>
+
+                        <strong>
+                            1,248
+                        </strong>
+
+                        <small>
+                            +12.5% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            UPCOMING EVENTS
+                        </span>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <small>
+                            Next event in 3 days
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE STUDENTS
+                        </span>
+
+                        <strong>
+                            2,054
+                        </strong>
+
+                        <small>
+                            Registered users
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CONTENT GRID -->
+
+            <section class="admin-content-grid">
+
+
+                <!-- RECENT EVENTS -->
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Events
+                            </h2>
+
+                            <p>
+                                Latest events created on the platform.
+                            </p>
+
+                        </div>
+
+                        <a href="manage-events.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        EVENT
+                                    </th>
+
+                                    <th>
+                                        DATE
+                                    </th>
+
+                                    <th>
+                                        CATEGORY
+                                    </th>
+
+                                    <th>
+                                        REGISTRATIONS
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            AI & Machine Learning Workshop
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Oct 20, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-category">
+                                            Technical
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        84
+                                    </td>
+
+                                    <td>
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Campus Cultural Fest
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Oct 25, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-category">
+                                            Cultural
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        120
+                                    </td>
+
+                                    <td>
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Inter-College Sports Meet
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Oct 28, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-category">
+                                            Sports
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        56
+                                    </td>
+
+                                    <td>
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Career Development Workshop
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Oct 30, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-category">
+                                            Workshop
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        73
+                                    </td>
+
+                                    <td>
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="admin-panel quick-actions-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <p>
+                                Manage your platform.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <a href="add-event.html"
+                            class="quick-action">
+
+                            <span class="quick-icon purple">
+                                ＋
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Create Event
+                                </strong>
+
+                                <span>
+                                    Add a new campus event
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="manage-events.html"
+                            class="quick-action">
+
+                            <span class="quick-icon blue">
+                                ◈
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Manage Events
+                                </strong>
+
+                                <span>
+                                    Edit or remove events
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="registrations.html"
+                            class="quick-action">
+
+                            <span class="quick-icon green">
+                                ♙
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    View Registrations
+                                </strong>
+
+                                <span>
+                                    Check registered students
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

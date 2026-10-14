@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Add Event | Campus Events</title>
+
+    <link rel="stylesheet"
+        href="../../css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="admin-body">
+
+
+    <!-- ADMIN NAVBAR -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-brand">
+
+            <a href="../../index.html"
+                class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+            <span class="admin-label">
+                ADMIN PANEL
+            </span>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div>
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Event Manager
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="admin-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <nav>
+
+                <a href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span>▦</span>
+                    Dashboard
+
+                </a>
+
+
+                <a href="manage-events.html"
+                    class="admin-nav-link">
+
+                    <span>◈</span>
+                    Manage Events
+
+                </a>
+
+
+                <a href="add-event.html"
+                    class="admin-nav-link active">
+
+                    <span>＋</span>
+                    Add Event
+
+                </a>
+
+
+                <a href="registrations.html"
+                    class="admin-nav-link">
+
+                    <span>♙</span>
+                    Registrations
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="../../index.html"
+                    class="admin-nav-link">
+
+                    <span>←</span>
+                    Back to Website
+
+                </a>
+
+
+                <a href="../login.html"
+                    class="admin-nav-link logout-link">
+
+                    <span>↪</span>
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN -->
+
+        <main class="admin-main">
+
+
+            <div class="admin-page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        EVENT MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Add New Event
+                    </h1>
+
+                    <p>
+                        Create a new event for students to discover
+                        and register.
+                    </p>
+
+                </div>
+
+
+                <a href="manage-events.html"
+                    class="secondary-admin-btn">
+
+                    ← Back to Events
+
+                </a>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <div class="event-form-layout">
+
+
+                <div class="admin-panel event-form-panel">
+
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <h2>
+                                Event Details
+                            </h2>
+
+                            <p>
+                                Enter the information for the new event.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="addEventForm">
+
+
+                        <!-- EVENT NAME -->
+
+                        <div class="form-group">
+
+                            <label for="eventName">
+                                Event Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventName"
+                                placeholder="e.g. Campus Hackathon 2026"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="form-group">
+
+                            <label for="eventDescription">
+                                Description *
+                            </label>
+
+                            <textarea
+                                id="eventDescription"
+                                rows="5"
+                                placeholder="Describe the event..."
+                                required></textarea>
+
+                        </div>
+
+
+
+                        <!-- CATEGORY + ORGANIZER -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="eventCategory">
+                                    Category *
+                                </label>
+
+                                <select
+                                    id="eventCategory"
+                                    required>
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="technical">
+                                        Technical
+                                    </option>
+
+                                    <option value="cultural">
+                                        Cultural
+                                    </option>
+
+                                    <option value="sports">
+                                        Sports
+                                    </option>
+
+                                    <option value="workshop">
+                                        Workshop
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="eventOrganizer">
+                                    Organizer *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="eventOrganizer"
+                                    placeholder="Department / Club"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DATE + TIME -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="eventDate">
+                                    Event Date *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="eventDate"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="eventTime">
+                                    Event Time *
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="eventTime"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- VENUE + SEATS -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="eventVenue">
+                                    Venue *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="eventVenue"
+                                    placeholder="e.g. Main Auditorium"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="eventCapacity">
+                                    Maximum Seats *
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="eventCapacity"
+                                    placeholder="100"
+                                    min="1"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- STATUS -->
+
+                        <div class="form-group">
+
+                            <label for="eventStatus">
+                                Event Status
+                            </label>
+
+                            <select id="eventStatus">
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="draft">
+                                    Draft
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- BUTTONS -->
+
+                        <div class="event-form-actions">
+
+                            <a href="manage-events.html"
+                                class="cancel-form-btn">
+
+                                Cancel
+
+                            </a>
+
+
+                            <button
+                                type="submit"
+                                class="admin-primary-btn">
+
+                                Create Event
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        class="event-created-success"
+                        id="eventCreatedSuccess">
+
+                        <div class="success-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Event Created Successfully!
+                        </h3>
+
+                        <p>
+                            Your event has been added to the
+                            Campus Events platform.
+                        </p>
+
+                        <a href="manage-events.html"
+                            class="admin-primary-btn">
+
+                            View All Events
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SIDE INFO -->
+
+                <aside class="event-form-side">
+
+
+                    <div class="admin-panel form-help-card">
+
+                        <span class="section-label">
+                            EVENT CREATION
+                        </span>
+
+                        <h2>
+                            Tips for creating an event
+                        </h2>
+
+                        <div class="form-tip">
+
+                            <strong>
+                                Give it a clear name
+                            </strong>
+
+                            <p>
+                                Use a short and descriptive event
+                                title students can understand quickly.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-tip">
+
+                            <strong>
+                                Add useful details
+                            </strong>
+
+                            <p>
+                                Include the venue, date, time and
+                                maximum capacity.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-tip">
+
+                            <strong>
+                                Choose the right category
+                            </strong>
+
+                            <p>
+                                Categories help students find events
+                                more easily.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-panel preview-card">
+
+                        <span class="section-label">
+                            PREVIEW
+                        </span>
+
+                        <div class="event-preview">
+
+                            <span
+                                id="previewCategory"
+                                class="table-category">
+
+                                CATEGORY
+
+                            </span>
+
+                            <h3 id="previewName">
+                                Your Event Name
+                            </h3>
+
+                            <p id="previewDescription">
+                                Your event description will appear here.
+                            </p>
+
+                            <div class="preview-details">
+
+                                <span id="previewDate">
+                                    📅 Event date
+                                </span>
+
+                                <span id="previewTime">
+                                    ⏰ Event time
+                                </span>
+
+                                <span id="previewVenue">
+                                    📍 Event venue
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrations | Campus Events</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="admin-body">
+
+    <!-- ADMIN NAVBAR -->
+
+    <header class="admin-navbar">
+
+        <div class="admin-brand">
+
+            <a href="../../index.html" class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+            <span class="admin-label">
+                ADMIN PANEL
+            </span>
+
+        </div>
+
+
+        <div class="admin-user">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div>
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Event Manager
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="admin-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <nav>
+
+                <a href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span>▦</span>
+                    Dashboard
+
+                </a>
+
+
+                <a href="manage-events.html"
+                    class="admin-nav-link">
+
+                    <span>◈</span>
+                    Manage Events
+
+                </a>
+
+
+                <a href="add-event.html"
+                    class="admin-nav-link">
+
+                    <span>＋</span>
+                    Add Event
+
+                </a>
+
+
+                <a href="registrations.html"
+                    class="admin-nav-link active">
+
+                    <span>♙</span>
+                    Registrations
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="../../index.html"
+                    class="admin-nav-link">
+
+                    <span>←</span>
+                    Back to Website
+
+                </a>
+
+
+                <a href="../login.html"
+                    class="admin-nav-link logout-link">
+
+                    <span>↪</span>
+                    Logout
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+
+            <div class="admin-page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        STUDENT REGISTRATIONS
+                    </span>
+
+                    <h1>
+                        Registrations
+                    </h1>
+
+                    <p>
+                        View and manage students registered for campus events.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REGISTRATION STATS -->
+
+            <section class="admin-stat-grid">
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon purple">
+                        ♙
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL REGISTRATIONS
+                        </span>
+
+                        <strong>
+                            1,248
+                        </strong>
+
+                        <small>
+                            Across all events
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CONFIRMED
+                        </span>
+
+                        <strong>
+                            1,186
+                        </strong>
+
+                        <small>
+                            95% confirmation rate
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PENDING
+                        </span>
+
+                        <strong>
+                            62
+                        </strong>
+
+                        <small>
+                            Awaiting confirmation
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon blue">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <span>
+                            EVENTS
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <small>
+                            With registrations
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SEARCH AND FILTER -->
+
+            <div class="registration-toolbar">
+
+
+                <div class="admin-search">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="registrationSearch"
+                        placeholder="Search student, email or event...">
+
+                </div>
+
+
+                <select id="registrationEventFilter">
+
+                    <option value="all">
+                        All Events
+                    </option>
+
+                    <option value="ai">
+                        AI & Machine Learning Workshop
+                    </option>
+
+                    <option value="cultural">
+                        Campus Cultural Fest
+                    </option>
+
+                    <option value="sports">
+                        Inter-College Sports Meet
+                    </option>
+
+                    <option value="career">
+                        Career Development Workshop
+                    </option>
+
+                </select>
+
+
+                <select id="registrationStatusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="confirmed">
+                        Confirmed
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- REGISTRATION TABLE -->
+
+            <div class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <h2>
+                            Registered Students
+                        </h2>
+
+                        <p>
+                            Students who have registered for campus events.
+                        </p>
+
+                    </div>
+
+                    <span class="event-count-label">
+                        8 Registrations
+                    </span>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table registration-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    STUDENT
+                                </th>
+
+                                <th>
+                                    EMAIL
+                                </th>
+
+                                <th>
+                                    EVENT
+                                </th>
+
+                                <th>
+                                    REGISTERED ON
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="registrationTable">
+
+
+                            <tr
+                                data-event="ai"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Rahul Sharma
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    rahul.sharma@college.edu
+                                </td>
+
+                                <td>
+                                    AI & Machine Learning Workshop
+                                </td>
+
+                                <td>
+                                    Oct 05, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="ai"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Priya Reddy
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    priya.reddy@college.edu
+                                </td>
+
+                                <td>
+                                    AI & Machine Learning Workshop
+                                </td>
+
+                                <td>
+                                    Oct 06, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="cultural"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Arjun Kumar
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    arjun.kumar@college.edu
+                                </td>
+
+                                <td>
+                                    Campus Cultural Fest
+                                </td>
+
+                                <td>
+                                    Oct 07, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="cultural"
+                                data-status="pending">
+
+                                <td>
+                                    <strong>
+                                        Sneha Rao
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    sneha.rao@college.edu
+                                </td>
+
+                                <td>
+                                    Campus Cultural Fest
+                                </td>
+
+                                <td>
+                                    Oct 07, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="sports"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Aditya Singh
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    aditya.singh@college.edu
+                                </td>
+
+                                <td>
+                                    Inter-College Sports Meet
+                                </td>
+
+                                <td>
+                                    Oct 08, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="sports"
+                                data-status="pending">
+
+                                <td>
+                                    <strong>
+                                        Neha Patel
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    neha.patel@college.edu
+                                </td>
+
+                                <td>
+                                    Inter-College Sports Meet
+                                </td>
+
+                                <td>
+                                    Oct 09, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="career"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Karthik Reddy
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    karthik.reddy@college.edu
+                                </td>
+
+                                <td>
+                                    Career Development Workshop
+                                </td>
+
+                                <td>
+                                    Oct 10, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-event="career"
+                                data-status="confirmed">
+
+                                <td>
+                                    <strong>
+                                        Ananya Verma
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    ananya.verma@college.edu
+                                </td>
+
+                                <td>
+                                    Career Development Workshop
+                                </td>
+
+                                <td>
+                                    Oct 11, 2026
+                                </td>
+
+                                <td>
+                                    <span class="registration-status confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-registration-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

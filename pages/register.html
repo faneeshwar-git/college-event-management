@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Campus Events</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="../index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="auth-page">
+
+        <div class="auth-card register-card">
+
+            <div class="auth-header">
+
+                <span class="section-label">
+                    JOIN CAMPUS EVENTS
+                </span>
+
+                <h1>Create your account</h1>
+
+                <p>
+                    Register to discover events and reserve
+                    your place at campus activities.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <div class="form-group">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        College Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="example@college.edu"
+                        required>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="registerStudentId">
+                            Student ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerStudentId"
+                            placeholder="Student ID"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerYear">
+                            Year
+                        </label>
+
+                        <select
+                            id="registerYear"
+                            required>
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                1st Year
+                            </option>
+
+                            <option value="2">
+                                2nd Year
+                            </option>
+
+                            <option value="3">
+                                3rd Year
+                            </option>
+
+                            <option value="4">
+                                4th Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerDepartment">
+                        Department
+                    </label>
+
+                    <select
+                        id="registerDepartment"
+                        required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="cse">
+                            Computer Science
+                        </option>
+
+                        <option value="ece">
+                            Electronics & Communication
+                        </option>
+
+                        <option value="eee">
+                            Electrical Engineering
+                        </option>
+
+                        <option value="me">
+                            Mechanical Engineering
+                        </option>
+
+                        <option value="civil">
+                            Civil Engineering
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+            <p class="auth-footer">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

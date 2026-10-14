@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Campus Events</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">C</span>
+
+                <span>
+                    Campus<span class="logo-highlight">Events</span>
+                </span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="events.html" class="active">
+                    Events
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="#" class="login-btn">
+                    Login
+                </a>
+
+                <a href="#" class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Events Header -->
+
+    <main>
+
+        <section class="events-page">
+
+            <div class="events-page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        CAMPUS ACTIVITIES
+                    </span>
+
+                    <h1>
+                        Explore Events
+                    </h1>
+
+                    <p>
+                        Discover workshops, competitions, cultural
+                        programs and more happening on campus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="event-search">
+
+                <input
+                    type="text"
+                    id="eventSearch"
+                    placeholder="Search events..."
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- Categories -->
+
+            <div class="category-filter">
+
+                <button class="filter-btn active" data-category="all">
+                    All Events
+                </button>
+
+                <button class="filter-btn" data-category="technical">
+                    Technical
+                </button>
+
+                <button class="filter-btn" data-category="cultural">
+                    Cultural
+                </button>
+
+                <button class="filter-btn" data-category="sports">
+                    Sports
+                </button>
+
+                <button class="filter-btn" data-category="workshop">
+                    Workshop
+                </button>
+
+            </div>
+
+
+            <!-- Events -->
+
+            <div class="event-grid" id="eventGrid">
+
+
+                <!-- Event 1 -->
+
+                <article class="event-card"
+                    data-category="technical"
+                    data-title="AI Machine Learning Workshop">
+
+                    <div class="event-image technical">
+
+                        <span class="category">
+                            TECHNICAL
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                20
+                            </strong>
+
+                            OCT
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            AI & Machine Learning Workshop
+                        </h3>
+
+                        <p>
+                            Learn the fundamentals of AI and
+                            machine learning from industry experts.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Seminar Hall
+                            </span>
+
+                            <span>
+                                ⏰ 10:00 AM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 2 -->
+
+                <article class="event-card"
+                    data-category="cultural"
+                    data-title="Campus Cultural Fest">
+
+                    <div class="event-image cultural">
+
+                        <span class="category">
+                            CULTURAL
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                25
+                            </strong>
+
+                            OCT
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            Campus Cultural Fest
+                        </h3>
+
+                        <p>
+                            Celebrate music, dance, art and culture
+                            with your campus community.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Open Grounds
+                            </span>
+
+                            <span>
+                                ⏰ 5:00 PM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 3 -->
+
+                <article class="event-card"
+                    data-category="sports"
+                    data-title="Inter College Sports Meet">
+
+                    <div class="event-image sports">
+
+                        <span class="category">
+                            SPORTS
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            OCT
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            Inter-College Sports Meet
+                        </h3>
+
+                        <p>
+                            Compete, connect and represent your
+                            college in multiple sports.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Sports Complex
+                            </span>
+
+                            <span>
+                                ⏰ 8:00 AM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 4 -->
+
+                <article class="event-card"
+                    data-category="workshop"
+                    data-title="Career Development Workshop">
+
+                    <div class="event-image technical">
+
+                        <span class="category">
+                            WORKSHOP
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                30
+                            </strong>
+
+                            OCT
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            Career Development Workshop
+                        </h3>
+
+                        <p>
+                            Improve your resume, interview skills
+                            and career readiness.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Seminar Hall
+                            </span>
+
+                            <span>
+                                ⏰ 2:00 PM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 5 -->
+
+                <article class="event-card"
+                    data-category="technical"
+                    data-title="Hackathon 2026">
+
+                    <div class="event-image technical">
+
+                        <span class="category">
+                            TECHNICAL
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                02
+                            </strong>
+
+                            NOV
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            Campus Hackathon 2026
+                        </h3>
+
+                        <p>
+                            Build innovative solutions and compete
+                            with the best student developers.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Innovation Lab
+                            </span>
+
+                            <span>
+                                ⏰ 9:00 AM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 6 -->
+
+                <article class="event-card"
+                    data-category="cultural"
+                    data-title="Photography Exhibition">
+
+                    <div class="event-image cultural">
+
+                        <span class="category">
+                            CULTURAL
+                        </span>
+
+                        <span class="event-date">
+
+                            <strong>
+                                05
+                            </strong>
+
+                            NOV
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <h3>
+                            Student Photography Exhibition
+                        </h3>
+
+                        <p>
+                            Explore creative photography from
+                            talented students across campus.
+                        </p>
+
+                        <div class="event-details">
+
+                            <span>
+                                📍 Art Gallery
+                            </span>
+
+                            <span>
+                                ⏰ 4:00 PM
+                            </span>
+
+                        </div>
+
+                        <a href="event-details.html" class="event-link">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo footer-logo">
+
+                    <span class="logo-icon">
+                        C
+                    </span>
+
+                    <span>
+                        Campus<span class="logo-highlight">
+                            Events
+                        </span>
+                    </span>
+
+                </div>
+
+                <p>
+                    Connecting students with experiences
+                    that matter.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Campus Events.
+            College Event Management System.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Events | Campus Events</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html"
+                class="logo">
+
+                <span class="logo-icon">
+                    C
+                </span>
+
+                <span>
+                    Campus<span class="logo-highlight">
+                        Events
+                    </span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="my-events.html"
+                    class="active">
+                    My Events
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="login.html"
+                    class="login-btn">
+                    Login
+                </a>
+
+                <a href="register.html"
+                    class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="my-events-page">
+
+
+        <!-- HEADER -->
+
+        <section class="my-events-header">
+
+            <div>
+
+                <span class="section-label">
+                    STUDENT DASHBOARD
+                </span>
+
+                <h1>
+                    My Events
+                </h1>
+
+                <p>
+                    Manage the events you've registered
+                    for and keep track of your upcoming
+                    activities.
+                </p>
+
+            </div>
+
+
+            <a href="events.html"
+                class="primary-btn">
+
+                + Explore Events
+
+            </a>
+
+        </section>
+
+
+
+        <!-- PROFILE SUMMARY -->
+
+        <section class="student-summary">
+
+
+            <div class="student-avatar">
+                RF
+            </div>
+
+
+            <div class="student-info">
+
+                <h2>
+                    Student Account
+                </h2>
+
+                <p>
+                    Computer Science · 2nd Year
+                </p>
+
+            </div>
+
+
+            <div class="summary-stat">
+
+                <strong>
+                    3
+                </strong>
+
+                <span>
+                    Registered Events
+                </span>
+
+            </div>
+
+
+            <div class="summary-stat">
+
+                <strong>
+                    2
+                </strong>
+
+                <span>
+                    Upcoming
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- EVENT LIST -->
+
+        <section class="registered-events-section">
+
+
+            <div class="registered-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR REGISTRATIONS
+                    </span>
+
+                    <h2>
+                        Upcoming Events
+                    </h2>
+
+                </div>
+
+
+                <select
+                    id="eventStatusFilter">
+
+                    <option value="all">
+                        All Events
+                    </option>
+
+                    <option value="upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div
+                class="registered-events-grid"
+                id="registeredEventsGrid">
+
+
+                <!-- EVENT 1 -->
+
+                <article
+                    class="registered-event-card"
+                    data-status="upcoming">
+
+
+                    <div class="registered-event-top">
+
+                        <div class="mini-event-date">
+
+                            <strong>
+                                20
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <span class="status upcoming">
+                            UPCOMING
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="small-category">
+                            TECHNICAL
+                        </span>
+
+                        <h3>
+                            AI & Machine Learning Workshop
+                        </h3>
+
+                        <p>
+                            📍 Main Seminar Hall
+                        </p>
+
+                        <p>
+                            ⏰ 10:00 AM – 1:00 PM
+                        </p>
+
+                    </div>
+
+
+                    <div class="registered-event-actions">
+
+                        <a href="event-details.html">
+                            View Event
+                        </a>
+
+                        <button
+                            class="cancel-btn">
+
+                            Cancel Registration
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- EVENT 2 -->
+
+                <article
+                    class="registered-event-card"
+                    data-status="upcoming">
+
+
+                    <div class="registered-event-top">
+
+                        <div class="mini-event-date">
+
+                            <strong>
+                                25
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <span class="status upcoming">
+                            UPCOMING
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="small-category">
+                            CULTURAL
+                        </span>
+
+                        <h3>
+                            Campus Cultural Fest
+                        </h3>
+
+                        <p>
+                            📍 Open Grounds
+                        </p>
+
+                        <p>
+                            ⏰ 5:00 PM – 9:00 PM
+                        </p>
+
+                    </div>
+
+
+                    <div class="registered-event-actions">
+
+                        <a href="event-details.html">
+                            View Event
+                        </a>
+
+                        <button
+                            class="cancel-btn">
+
+                            Cancel Registration
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- EVENT 3 -->
+
+                <article
+                    class="registered-event-card"
+                    data-status="completed">
+
+
+                    <div class="registered-event-top">
+
+                        <div class="mini-event-date">
+
+                            <strong>
+                                10
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <span class="status completed">
+                            COMPLETED
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="small-category">
+                            WORKSHOP
+                        </span>
+
+                        <h3>
+                            Career Development Workshop
+                        </h3>
+
+                        <p>
+                            📍 Seminar Hall
+                        </p>
+
+                        <p>
+                            ⏰ 2:00 PM – 4:00 PM
+                        </p>
+
+                    </div>
+
+
+                    <div class="registered-event-actions">
+
+                        <a href="event-details.html">
+                            View Event
+                        </a>
+
+                        <button
+                            class="cancel-btn">
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo footer-logo">
+
+                    <span class="logo-icon">
+                        C
+                    </span>
+
+                    <span>
+                        Campus<span class="logo-highlight">
+                            Events
+                        </span>
+                    </span>
+
+                </div>
+
+                <p>
+                    Connecting students with experiences
+                    that matter.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="my-events.html">
+                    My Events
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Campus Events.
+            College Event Management System.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
