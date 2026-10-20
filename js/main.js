@@ -272,8 +272,7 @@ const registerForm =
 
 if (registerForm) {
 
-    registerForm.addEventListener("submit", function (event) {
-
+    registerForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const password =
@@ -290,11 +289,49 @@ if (registerForm) {
 
         }
 
-        alert("Account created successfully! Database registration will be connected later.");
-
-        registerForm.reset();
+        
 
     });
+        const fullName = document.getElementById("registerName").value.trim();
+        const email = document.getElementById("registerEmail").value.trim();
+        const studentId = document.getElementById("registerStudentId").value.trim();
+        const year = document.getElementById("registerYear").value;
+        const department = document.getElementById("registerDepartment").value;
+
+        try {
+            const response = await fetch(
+                "https://college-event-management-production-ce99.up.railway.app/api/auth/register",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        fullName,
+                        email,
+                        studentId,
+                        year,
+                        department,
+                        password
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                alert(data.message || "Registration failed.");
+                return;
+            }
+
+            alert(data.message || "Account created successfully!");
+            registerForm.reset();
+
+        } catch (error) {
+            console.error("Registration error:", error);
+            alert("Could not connect to the server. Please try again.");
+        }
+
 
 }
 // ========================================
