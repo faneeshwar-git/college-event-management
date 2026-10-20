@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         previewButton.addEventListener("click", function () {
 
-            alert("Event details page will be available soon!");
+            window.location.href = "pages/event-details.html";
 
         });
 
