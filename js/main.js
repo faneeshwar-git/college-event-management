@@ -291,7 +291,7 @@ if (registerForm) {
 
         
 
-    });
+
         const fullName = document.getElementById("registerName").value.trim();
         const email = document.getElementById("registerEmail").value.trim();
         const studentId = document.getElementById("registerStudentId").value.trim();
@@ -331,9 +331,9 @@ if (registerForm) {
             console.error("Registration error:", error);
             alert("Could not connect to the server. Please try again.");
         }
-
-
+    });
 }
+
 // ========================================
 // MY EVENTS - STATUS FILTER
 // ========================================
