@@ -62,4 +62,30 @@ public class AuthController {
                 )
         );
     }
+    @PostMapping("/login")
+public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
+
+    String email = credentials.get("email");
+    String password = credentials.get("password");
+
+    if (email == null || password == null) {
+        return ResponseEntity.badRequest().body(
+                Map.of("message", "Email and password are required.")
+        );
+    }
+
+    User user = userRepository.findByEmail(email)
+            .orElse(null);
+
+    if (user == null ||
+            !passwordEncoder.matches(password, user.getPassword())) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
+                Map.of("message", "Invalid email or password.")
+        );
+    }
+
+    return ResponseEntity.ok(
+            Map.of("message", "Login successful!")
+    );
+}
 }
