@@ -179,40 +179,60 @@ if (registrationModal) {
 }
 
 
+
 if (registrationForm) {
-
-    registrationForm.addEventListener("submit", function (event) {
-
+    registrationForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
+        const name = document.getElementById("studentName").value.trim();
+        const email = document.getElementById("studentEmail").value.trim();
+        const studentId = document.getElementById("studentId").value.trim();
 
-        const name =
-            document.getElementById("studentName").value.trim();
+        // Get the event name from the page heading
+        const eventHeading = document.querySelector("h1");
+        const eventName = eventHeading
+            ? eventHeading.textContent.trim()
+            : "";
 
-        const email =
-            document.getElementById("studentEmail").value.trim();
-
-        const studentId =
-            document.getElementById("studentId").value.trim();
-
-
-        if (!name || !email || !studentId) {
-
+        if (!name || !email || !studentId || !eventName) {
             alert("Please fill in all required fields.");
-
             return;
-
         }
 
+        try {
+            const response = await fetch(
+                "https://college-event-management-backend-255d.onrender.com/api/event-registrations",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        studentName: name,
+                        email: email,
+                        studentId: studentId,
+                        eventName: eventName
+                    })
+                }
+            );
 
-        registrationForm.style.display = "none";
+            const data = await response.json();
 
-        registrationSuccess.classList.add("show");
+            if (!response.ok) {
+                alert(data.message || "Event registration failed.");
+                return;
+            }
 
+            registrationForm.style.display = "none";
+            registrationSuccess.classList.add("show");
+
+        } catch (error) {
+            console.error("Event registration error:", error);
+            alert("Could not connect to the server. Please try again.");
+        }
     });
-
 }
-
+           
 
 if (closeSuccess) {
 
