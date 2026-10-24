@@ -233,33 +233,42 @@ if (closeSuccess) {
 // LOGIN
 // ========================================
 
-const loginForm =
-    document.getElementById("loginForm");
+
+const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
-
-    loginForm.addEventListener("submit", function (event) {
-
+    loginForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const email =
-            document.getElementById("loginEmail").value.trim();
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
 
-        const password =
-            document.getElementById("loginPassword").value.trim();
+        try {
+            const response = await fetch(
+                "https://college-event-management-backend-255d.onrender.com/api/auth/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, password })
+                }
+            );
 
-        if (!email || !password) {
+            const data = await response.json();
 
-            alert("Please enter your email and password.");
+            if (!response.ok) {
+                alert(data.message || "Login failed. Check your email and password.");
+                return;
+            }
 
-            return;
+            alert(data.message || "Login successful!");
 
+        } catch (error) {
+            console.error("Login error:", error);
+            alert("Could not connect to the server. Please try again.");
         }
-
-        alert("Login successful! Backend authentication will be connected later.");
-
     });
-
 }
 
 
