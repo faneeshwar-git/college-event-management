@@ -309,7 +309,7 @@ if (registerForm) {
 
         try {
             const response = await fetch(
-                "https://college-event-management-production-ce99.up.railway.app/api/auth/register",
+               "https://college-event-management-backend-255d.onrender.com/api/auth/register",
                 {
                     method: "POST",
                     headers: {
