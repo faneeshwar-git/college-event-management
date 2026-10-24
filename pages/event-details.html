@@ -637,6 +637,44 @@
 
 
     <script src="../js/main.js"></script>
+    <script>
+const events = {
+    "ai-workshop": {
+        title: "AI & Machine Learning Workshop",
+        label: "TECHNICAL EVENT",
+        description: "Explore Artificial Intelligence and Machine Learning through a hands-on workshop."
+    },
+    "cultural-fest": {
+        title: "Campus Cultural Fest",
+        label: "CULTURAL EVENT",
+        description: "Celebrate campus talent with music, dance, performances, and cultural activities."
+    },
+    "sports-meet": {
+        title: "Inter-College Sports Meet",
+        label: "SPORTS EVENT",
+        description: "Compete with students from different colleges in exciting sporting events."
+    },
+    "career-workshop": {
+        title: "Career Development Workshop",
+        label: "WORKSHOP",
+        description: "Develop professional skills and explore career opportunities."
+    }
+};
+
+const eventId = new URLSearchParams(window.location.search).get("event");
+const selectedEvent = events[eventId];
+
+if (selectedEvent) {
+    document.querySelector("h1").textContent = selectedEvent.title;
+    document.title = selectedEvent.title + " | Campus Events";
+
+    const label = document.querySelector(".section-label");
+    if (label) label.textContent = selectedEvent.label;
+
+    const description = document.querySelector(".event-intro");
+    if (description) description.textContent = selectedEvent.description;
+}
+</script>
 
 </body>
 
